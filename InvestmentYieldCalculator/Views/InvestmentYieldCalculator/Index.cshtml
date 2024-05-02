@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Investment Yield Calculator";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Investment Yield Calculator</h1>
+    <p>Welcome to the Investment Yield Calculator. Use this tool to calculate the yield of your investments.</p>
+    <p>To get started, please enter the details of your investment:</p>
+
+    <form id="calculateYtwForm" method="post">
+        <div class="row">
+            <div class="form-group col-md-6 col-lg-3">
+                <label for="nominalValue">Nominal Value:</label>
+                <input type="number" class="form-control" id="nominalValue" name="nominalValue" placeholder="0">
+            </div>
+            <div class="form-group col-md-6 col-lg-3">
+                <label for="cupomRate">Coupon Rate:</label>
+                <input type="number" class="form-control" id="cupomRate" name="cupomRate" placeholder="0">
+            </div>
+            <div class="form-group col-md-6 col-lg-3">
+                <label for="bondType">Bond Type:</label>
+                <select class="form-control" id="bondType" name="bondType">
+                    <option value="0">Zero Coupon</option>
+                    <option value="1">Corporate</option>
+                    <option value="2">Municipal</option>
+                    <option value="3">Government</option>
+                    <option value="4">Convertible</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6 col-lg-3">
+                <label for="couponType">Coupon Type:</label>
+                <select class="form-control" id="couponType" name="couponType">
+                    <option value="0">Zero Coupon</option>
+                    <option value="1">Fixed</option>
+                    <option value="2">Variable</option>
+                    <option value="3">Deferred</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" id="calculateYtwButton" class="btn btn-primary my-4 py-4">Calculate YTW</button>
+    </form>
+
+</div>
+
+@section Scripts {
+    <script src="~/js/calculateYtw.js"></script>
+}
